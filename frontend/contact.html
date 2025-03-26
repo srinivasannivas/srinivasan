@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Contact</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Name:</strong> Srinivasan C</p>
+                <p><strong>Email:</strong> srinivasan8197@gmail.com</p>
+                <p><strong>Mobile:</strong> +91 8681084218</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/srinivasan-designer/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100066773574095" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/918681084218" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://discord.com/1058762771719790683" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="message-box">
+                <h3>Send a Message</h3>
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <p id="error-message"></p>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="message-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #00bcd4;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff4081;
+}
+
+/* Home Section */
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding-top: 80px; /* Adjusted for fixed navbar */
+    position: relative; /* Allows absolutely positioned .navigation */
+}
+
+/* Profile Image */
+.profile img {
+    width: 500px;
+    border-radius: 0px;
+    /* Use the new keyframe animation for profile image */
+    animation: profileSlideIn 2s forwards ease-in-out;
+}
+
+/* Keyframes for Profile Image Animation */
+@keyframes profileSlideIn {
+    0% {
+        transform: translateX(-100px); /* start off to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(150px); /* final position as defined */
+        opacity: 1;
+    }
+}
+
+/* Navigation Links */
+.navigation {
+    text-align: left; /* links remain left-aligned within their block */
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+    /* For centering vertically relative to its set bottom, we remove any transform
+       used previously for centering, and instead animate the slide-in effect */
+    animation: navSlideIn 2s forwards ease-in-out;
+}
+
+.navigation a {
+    display: block;
+    margin: 60px 0;
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+    color: #ff4081;
+    transform: translateX(10px);
+}
+
+/* Keyframes for Navigation Animation */
+@keyframes navSlideIn {
+    0% {
+        transform: translate(50px, 0); /* start shifted to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0); /* final position as defined by absolute properties */
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .profile img {
+        width: 450px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+        position: static;  /* Override absolute on mobile if desired */
+        transform: none;   /* Remove transform so it flows normally */
+        animation: none;    /* Optionally disable animation on mobile */
+    }
+
+    .navigation a {
+        font-size: 20px;
+    }
+}

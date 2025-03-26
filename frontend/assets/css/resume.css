@@ -1,0 +1,165 @@
+/* ----------------------------------------
+   1. General Reset & Typography
+---------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ----------------------------------------
+   2. Body Styling
+---------------------------------------- */
+body, html {
+    height: 100%;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* ----------------------------------------
+   3. Full-Screen Container
+---------------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------------------
+   4. Navbar (Fixed)
+---------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff4081;
+}
+
+/* ----------------------------------------
+   5. Resume Content Styling
+---------------------------------------- */
+.resume-content {
+    text-align: center;
+    padding: 40px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 198, 255, 0.2);
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* ----------------------------------------
+   6. Resume Image Display
+---------------------------------------- */
+.resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.resume-container img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 198, 255, 0.2);
+}
+
+/* ----------------------------------------
+   7. Download Button
+---------------------------------------- */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #121212;
+    background: #00bcd4;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #ffffff;
+    color: #00bcd4;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------------------------
+   8. Responsive Design
+---------------------------------------- */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .resume-content {
+        padding: 30px;
+    }
+
+    .download-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h2 {
+        font-size: 22px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
